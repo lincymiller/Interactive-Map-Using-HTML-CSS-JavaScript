@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive Map</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+      #credits {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      #credits a {
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="credits">
+      Interactive Map implementation Using HTML, CSS, & JavaScript by Lincy Miller<br>
+      <a href="https://www.lincymiller.tech" target="_blank">https://www.lincymiller.tech</a><br>
+      <a href="https://www.github.com/lincymiller" target="_blank">https://www.github.com/lincymiller</a><br>
+      <a href="https://www.linkedin.com/in/lincy-m-99b228128/" target="_blank">https://www.linkedin.com/in/lincy-m-99b228128/</a>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_MAP_API_KEY"></script>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 33.7490, lng: -84.3880},
+          zoom: 8
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASORp7VucTts2Rvp99-m6MmoME1mluaw8&callback=initMap">
+    </script>
+  </body>
+</html>
